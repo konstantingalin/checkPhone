@@ -13,6 +13,8 @@
 	<h4></h4>
 	<h5></h5>
 	<h6></h6>
+	<pre></pre>
+	<p></p>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.29/ua-parser.min.js"></script>
 	<script>
 		// Создание объекта ua-parser
@@ -32,6 +34,11 @@
 		document.querySelector('h4').textContent = result.device.model;
 		document.querySelector('h5').textContent = result.device.type;
 		document.querySelector('h6').textContent = result.os.name + " " + result.os.version;
+		document.querySelector('pre').textContent = result.engine.name;
+		document.querySelector('p').textContent = result.engine.version;
+
+
+
 	</script>
 	<script src="index.js"></script>
 </body>
