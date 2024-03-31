@@ -25,21 +25,4 @@ if (/Android/i.test(userAgent)) {
 	
 }
 
-// Создание объекта ua-parser
-var parser = new UAParser();
-
-// Получение информации о текущем устройстве
-var result = parser.getResult();
-
-// Вывод информации в консоль
-console.log("Производитель: " + result.device.vendor);
-console.log("Модель: " + result.device.model);
-console.log("Тип устройства: " + result.device.type);
-console.log("Операционная система: " + result.os.name + " " + result.os.version);
-console.log("Браузер: " + result.browser.name + " " + result.browser.version);
-
-document.querySelector('h3').textContent = result.device.vendor;
-document.querySelector('h4').textContent = result.device.model;
-document.querySelector('h5').textContent = result.device.type;
-document.querySelector('h6').textContent = result.os.name + " " + result.os.version;
 
